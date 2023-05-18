@@ -1,0 +1,268 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "counter",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "increment",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x608060405234801561001057600080fd5b5060cc8061001f6000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c806361bc221a146037578063d09de08a146051575b600080fd5b603f60005481565b60405190815260200160405180910390f35b60576059565b005b6001600080828254606991906070565b9091555050565b80820180821115609057634e487b7160e01b600052601160045260246000fd5b9291505056fea2646970667358221220a2b22927740e0e0966bca77ea9f3ac54a4f2ec8acef169ca7811802e531c728864736f6c63430008130033",
+    "sourceMap": "58:115:52:-:0;;;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x6080604052348015600f57600080fd5b506004361060325760003560e01c806361bc221a146037578063d09de08a146051575b600080fd5b603f60005481565b60405190815260200160405180910390f35b60576059565b005b6001600080828254606991906070565b9091555050565b80820180821115609057634e487b7160e01b600052601160045260246000fd5b9291505056fea2646970667358221220a2b22927740e0e0966bca77ea9f3ac54a4f2ec8acef169ca7811802e531c728864736f6c63430008130033",
+    "sourceMap": "58:115:52:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;85:22;;;;;;;;;160:25:65;;;148:2;133:18;85:22:52;;;;;;;114:57;;;:::i;:::-;;;163:1;152:7;;:12;;;;;;;:::i;:::-;;;;-1:-1:-1;;114:57:52:o;196:222:65:-;261:9;;;282:10;;;279:133;;;334:10;329:3;325:20;322:1;315:31;369:4;366:1;359:15;397:4;394:1;387:15;279:133;196:222;;;;:::o",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "counter()": "61bc221a",
+    "increment()": "d09de08a"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"counter\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"increment\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/test/TestCounter.sol\":\"TestCounter\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=lib/openzeppelin-contracts/\",\":account-abstraction/=lib/account-abstraction/contracts/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\"]},\"sources\":{\"src/test/TestCounter.sol\":{\"keccak256\":\"0x528d440adf9736d0dcdffbdd640dfbbc84ae2bdde75bc81357196dde170678eb\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://85aff830adbf3773261c244c58e2ce4d2d91b88102703fec4abfb84b195b81ee\",\"dweb:/ipfs/QmUfPnCFEvJ1HBBYD1CJ25aqBoB4tERh8heTUUr8wsiLCX\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.19+commit.7dd6d404"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "counter",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "increment"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@openzeppelin/=lib/openzeppelin-contracts/",
+        ":account-abstraction/=lib/account-abstraction/contracts/",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":forge-std/=lib/forge-std/src/",
+        ":openzeppelin-contracts/=lib/openzeppelin-contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/test/TestCounter.sol": "TestCounter"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/test/TestCounter.sol": {
+        "keccak256": "0x528d440adf9736d0dcdffbdd640dfbbc84ae2bdde75bc81357196dde170678eb",
+        "urls": [
+          "bzz-raw://85aff830adbf3773261c244c58e2ce4d2d91b88102703fec4abfb84b195b81ee",
+          "dweb:/ipfs/QmUfPnCFEvJ1HBBYD1CJ25aqBoB4tERh8heTUUr8wsiLCX"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/test/TestCounter.sol",
+    "id": 36748,
+    "exportedSymbols": {
+      "TestCounter": [
+        36747
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "33:141:52",
+    "nodes": [
+      {
+        "id": 36736,
+        "nodeType": "PragmaDirective",
+        "src": "33:23:52",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ]
+      },
+      {
+        "id": 36747,
+        "nodeType": "ContractDefinition",
+        "src": "58:115:52",
+        "nodes": [
+          {
+            "id": 36738,
+            "nodeType": "VariableDeclaration",
+            "src": "85:22:52",
+            "nodes": [],
+            "constant": false,
+            "functionSelector": "61bc221a",
+            "mutability": "mutable",
+            "name": "counter",
+            "nameLocation": "100:7:52",
+            "scope": 36747,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 36737,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "85:7:52",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 36746,
+            "nodeType": "FunctionDefinition",
+            "src": "114:57:52",
+            "nodes": [],
+            "body": {
+              "id": 36745,
+              "nodeType": "Block",
+              "src": "142:29:52",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "id": 36743,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 36741,
+                      "name": "counter",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 36738,
+                      "src": "152:7:52",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "+=",
+                    "rightHandSide": {
+                      "hexValue": "31",
+                      "id": 36742,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "163:1:52",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_1_by_1",
+                        "typeString": "int_const 1"
+                      },
+                      "value": "1"
+                    },
+                    "src": "152:12:52",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 36744,
+                  "nodeType": "ExpressionStatement",
+                  "src": "152:12:52"
+                }
+              ]
+            },
+            "functionSelector": "d09de08a",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "increment",
+            "nameLocation": "123:9:52",
+            "parameters": {
+              "id": 36739,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "132:2:52"
+            },
+            "returnParameters": {
+              "id": 36740,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "142:0:52"
+            },
+            "scope": 36747,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "TestCounter",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          36747
+        ],
+        "name": "TestCounter",
+        "nameLocation": "67:11:52",
+        "scope": 36748,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 52
+}
