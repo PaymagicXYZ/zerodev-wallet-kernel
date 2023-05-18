@@ -26,7 +26,6 @@ typechain-types
 
 # Hardhat files
 cache
-artifacts
 artifacts-selected
 
 cache_hardhat
