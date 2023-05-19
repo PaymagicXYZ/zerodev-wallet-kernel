@@ -98,7 +98,8 @@ contract UpgradeUserOpTest is Test {
 
         kernelV2 = KernelV2(payable(address((kernel))));
 
-        console.log(kernelV2.hello());
-        console.log(address(kernelV2));
+        assertEq(address(kernelV2), address(kernel));
+
+        assertEq(kernelV2.hello(), "hello");
     }
 }
