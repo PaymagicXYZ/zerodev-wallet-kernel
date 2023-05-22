@@ -26,12 +26,15 @@ contract MultiValidator is Test {
     uint256 ownerKey;
     address ownerTwo;
     uint256 ownerTwoKey;
+    address random;
+    uint256 randomKey;
     address[] owners;
     address payable beneficiary;
 
     function setUp() public {
         (owner, ownerKey) = makeAddrAndKey("owner");
         (ownerTwo, ownerTwoKey) = makeAddrAndKey("ownerTwo");
+        (random, randomKey) = makeAddrAndKey("random");
         entryPoint = new EntryPoint();
 
         multiKernelFactory = new MultiKernelFactory(entryPoint);
@@ -168,5 +171,58 @@ contract MultiValidator is Test {
         assertEq(address(execution.validator), address(newValidator));
         assertEq(uint256(execution.validUntil), uint256(0));
         assertEq(uint256(execution.validAfter), uint256(0));
+    }
+
+    function test_set_execution2() external {
+        TestValidator newValidator = new TestValidator();
+        UserOperation memory op = entryPoint.fillUserOp(
+            address(kernel),
+            abi.encodeWithSelector(
+                KernelStorage.setExecution.selector,
+                bytes4(0xdeadbeef),
+                address(0xdead),
+                address(newValidator),
+                uint48(0),
+                uint48(0),
+                bytes("")
+            )
+        );
+        op.signature = abi.encodePacked(
+            bytes4(0x00000000),
+            entryPoint.signUserOpHash(vm, ownerTwoKey, op)
+        );
+        UserOperation[] memory ops = new UserOperation[](1);
+        ops[0] = op;
+        entryPoint.handleOps(ops, beneficiary);
+        ExecutionDetail memory execution = KernelStorage(address(kernel))
+            .getExecution(bytes4(0xdeadbeef));
+        assertEq(execution.executor, address(0xdead));
+        assertEq(address(execution.validator), address(newValidator));
+        assertEq(uint256(execution.validUntil), uint256(0));
+        assertEq(uint256(execution.validAfter), uint256(0));
+    }
+
+    function test_set_execution3() external {
+        TestValidator newValidator = new TestValidator();
+        UserOperation memory op = entryPoint.fillUserOp(
+            address(kernel),
+            abi.encodeWithSelector(
+                KernelStorage.setExecution.selector,
+                bytes4(0xdeadbeef),
+                address(0xdead),
+                address(newValidator),
+                uint48(0),
+                uint48(0),
+                bytes("")
+            )
+        );
+        op.signature = abi.encodePacked(
+            bytes4(0x00000000),
+            entryPoint.signUserOpHash(vm, randomKey, op)
+        );
+        UserOperation[] memory ops = new UserOperation[](1);
+        ops[0] = op;
+        vm.expectRevert();
+        entryPoint.handleOps(ops, beneficiary);
     }
 }
