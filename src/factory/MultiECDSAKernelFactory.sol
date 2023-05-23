@@ -26,7 +26,7 @@ contract MultiECDSAKernelFactory {
         address[] calldata _owners,
         uint256 _index
     ) public view returns (address) {
-        bytes memory data = abi.encodePacked(_owners);
+        bytes memory data = abi.encode(_owners);
         return singletonFactory.getAccountAddress(validator, data, _index);
     }
 }
